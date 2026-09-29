@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/vesper-tactics/assets/logo/vesper_crest_32.png" />
+    <title>Vesper Tactics</title>
+    <script type="module" crossorigin src="/vesper-tactics/assets/index-BNHjXVP_.js"></script>
+    <link rel="stylesheet" crossorigin href="/vesper-tactics/assets/index-jmbIqFgy.css">
+  </head>
+  <body>
+    <button
+      id="boot"
+      class="boot"
+      type="button"
+      autofocus
+      aria-label="Vesper Tactics. Click or tap to choose your party."
+    >
+      <img src="/vesper-tactics/assets/logo/vesper_logo_main_1280x720.png" alt="" />
+      <span class="boot-caption">Click or tap to choose your party</span>
+    </button>
+    <div id="party" class="party" hidden>
+      <div class="party-sheet">
+        <div class="party-brand">
+          <img class="party-crest" src="/vesper-tactics/assets/logo/vesper_crest_64.png" width="64" height="64" alt="" />
+          <h2 id="party-title"><span class="party-word">Vesper</span><span class="party-subword">Tactics</span></h2>
+        </div>
+        <div class="purse-row">
+          <span class="gold-badge" aria-label="Gold"><span class="coin" aria-hidden="true"></span><span id="party-gold">0</span> gold</span>
+          <button id="open-market" type="button" class="market-link">Market</button>
+        </div>
+        <div class="party-panel">
+          <div class="select-layout">
+            <section class="class-column" aria-labelledby="classes-title">
+              <h3 id="classes-title">Classes</h3>
+              <div id="class-list" class="class-list"></div>
+            </section>
+            <section id="class-detail" class="class-detail" aria-live="polite" aria-label="Selected class"></section>
+          </div>
+          <h3>Your team <span id="party-count">0 / 4</span></h3>
+          <ol id="party-slots" class="lineup"></ol>
+          <p class="party-hint">Click a class to see its stats and skills, then Add to team. The same class can join more than once. Team order is turn order.</p>
+          <p id="party-note" class="party-note" aria-live="polite"></p>
+          <p id="enemy-line" class="enemy-line"></p>
+          <button id="start-battle" type="button" disabled aria-describedby="party-note">Choose battlefield</button>
+        </div>
+      </div>
+    </div>
+    <div id="maps" class="party maps" hidden>
+      <div class="party-sheet">
+        <div class="party-brand">
+          <img class="party-crest" src="/vesper-tactics/assets/logo/vesper_crest_64.png" width="64" height="64" alt="" />
+          <h2><span class="party-word">Battlefield</span></h2>
+        </div>
+        <div class="party-panel map-panel">
+          <div id="theme-list" class="theme-list" role="radiogroup" aria-label="Map"></div>
+          <div class="map-body">
+            <div class="map-preview-frame">
+              <canvas id="map-preview" width="720" height="400" aria-label="Preview of the chosen map"></canvas>
+            </div>
+            <div class="map-controls">
+              <h3 id="map-name">Meadow</h3>
+              <p id="map-blurb" class="map-blurb"></p>
+              <label class="size-label" for="map-size">Size <output id="map-size-value" for="map-size">16 × 16</output></label>
+              <input id="map-size" type="range" min="12" max="20" step="1" value="16" />
+              <div class="size-ticks" aria-hidden="true"><span>12</span><span>16</span><span>20</span></div>
+              <button id="map-reroll" type="button" class="map-secondary">New layout</button>
+              <p class="map-legend" id="map-legend"></p>
+              <div class="map-actions">
+                <button id="map-back" type="button" class="map-secondary">Back to team</button>
+                <button id="map-start" type="button">Begin match</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="market" class="party market" hidden>
+      <div class="party-sheet">
+        <div class="party-brand">
+          <img class="party-crest" src="/vesper-tactics/assets/logo/vesper_crest_64.png" width="64" height="64" alt="" />
+          <h2><span class="party-word">Market</span></h2>
+        </div>
+        <div class="purse-row">
+          <span class="gold-badge" aria-label="Gold"><span class="coin" aria-hidden="true"></span><span id="market-gold">0</span> gold</span>
+          <button id="close-market" type="button" class="market-link">Back to team</button>
+        </div>
+        <div class="party-panel market-panel">
+          <p class="market-intro">Every enemy you defeat pays 5 gold. Each skill costs 20. A character can own one of its two Market skills, so buying one seals the other.</p>
+          <p id="market-note" class="market-note" aria-live="polite"></p>
+          <div id="market-list" class="market-list"></div>
+          <button id="reset-progress" type="button" class="map-secondary reset-progress">Reset gold and skills</button>
+        </div>
+      </div>
+    </div>
+    <div id="app" hidden>
+      <header>
+        <div class="brand">
+          <img class="crest" src="/vesper-tactics/assets/logo/vesper_crest_64.png" width="64" height="64" alt="" />
+          <div>
+            <p id="map-eyebrow" class="eyebrow">Meadow</p>
+            <h1>Vesper Tactics</h1>
+            <p class="sub">FFT-inspired chess-style tactics on a grid.</p>
+          </div>
+        </div>
+        <div class="header-actions">
+          <span id="match-badge" class="match-badge" aria-live="polite"></span>
+          <span class="gold-badge" aria-label="Gold"><span class="coin" aria-hidden="true"></span><span id="battle-gold">0</span> gold</span>
+          <button id="reset" type="button">Leave match</button>
+        </div>
+      </header>
+      <div class="layout">
+        <div class="board-column">
+          <div class="board-frame">
+            <canvas
+              id="board"
+              width="800"
+              height="500"
+              aria-label="Vesper Tactics battlefield, isometric grid. Drag to look around, scroll to zoom."
+            ></canvas>
+            <div id="round-panel" class="round-panel" role="dialog" aria-modal="false" aria-labelledby="round-title" hidden>
+              <div class="round-card">
+                <p id="round-eyebrow" class="round-eyebrow"></p>
+                <h2 id="round-title" class="round-title"></h2>
+                <div class="round-score" aria-label="Match score">
+                  <span class="round-side you"><span class="round-label">You</span><span id="score-you" class="round-num">0</span></span>
+                  <span class="round-dash">–</span>
+                  <span class="round-side enemy"><span id="score-enemy" class="round-num">0</span><span class="round-label">Enemy</span></span>
+                </div>
+                <ol id="round-pips" class="round-pips" aria-label="Round results"></ol>
+                <p id="round-stakes" class="round-stakes"></p>
+                <p id="round-gold" class="round-gold"></p>
+                <div class="round-actions">
+                  <button id="round-next" type="button"></button>
+                  <button id="round-market" type="button" class="map-secondary">Market</button>
+                  <button id="round-leave" type="button" class="map-secondary">Leave match</button>
+                </div>
+              </div>
+            </div>
+            <div class="zoom-controls" role="group" aria-label="Board view">
+              <button id="zoom-in" type="button" aria-label="Zoom in">+</button>
+              <button id="zoom-out" type="button" aria-label="Zoom out">−</button>
+              <button id="zoom-fit" type="button" aria-label="Show the whole board">Fit</button>
+              <button id="zoom-follow" type="button" aria-label="Center on the active unit">Unit</button>
+            </div>
+          </div>
+          <div id="battle-commands" class="rpg-hud">
+            <section class="rpg-window rpg-commands" aria-labelledby="command-title">
+              <p id="command-title" class="rpg-title">Command</p>
+              <ul class="rpg-list">
+                <li><button id="confirm-move" class="rpg-item" type="button" disabled>Move</button></li>
+                <li><button id="confirm-attack" class="rpg-item" type="button" disabled>Attack</button></li>
+                <li><button id="skip-move" class="rpg-item" type="button" disabled>Skip move</button></li>
+                <li><button id="wait" class="rpg-item" type="button" disabled>Wait</button></li>
+                <li><button id="confirm-cancel" class="rpg-item" type="button" disabled>Cancel</button></li>
+              </ul>
+            </section>
+            <section id="skill-row" class="rpg-window rpg-skills" aria-labelledby="skills-title">
+              <p id="skills-title" class="rpg-title">Skills <span id="skills-owner" class="rpg-owner"></span></p>
+              <ul class="rpg-list rpg-skill-list">
+                <li><button id="skill-1" class="rpg-item skill-item" type="button" disabled><span class="skill-label"></span><span class="skill-meta"></span></button></li>
+                <li><button id="skill-2" class="rpg-item skill-item" type="button" disabled><span class="skill-label"></span><span class="skill-meta"></span></button></li>
+                <li><button id="skill-3" class="rpg-item skill-item" type="button" disabled><span class="skill-label"></span><span class="skill-meta"></span></button></li>
+                <li><button id="skill-4" class="rpg-item skill-item" type="button" disabled><span class="skill-label"></span><span class="skill-meta"></span></button></li>
+              </ul>
+              <p id="skill-help" class="rpg-help" aria-live="polite"></p>
+            </section>
+          </div>
+          <p class="rules">Blue tiles preview a move. Orange tiles preview an attack. Click an enemy, then click it again to attack. For a skill, pick it from the Skills window, click the target, then click that target again. Cancel takes the preview back. Wait ends the turn.</p>
+        </div>
+        <aside>
+          <section class="panel">
+            <h2>Turn</h2>
+            <p id="turn-label" class="turn-label">—</p>
+            <p id="hint" class="hint">—</p>
+            <p id="cursor" class="cursor-readout">Tile —</p>
+          </section>
+          <section class="panel">
+            <h2>Selected</h2>
+            <div id="selected" class="selected"></div>
+          </section>
+          <section class="panel">
+            <h2>Field</h2>
+            <ul id="roster" class="roster"></ul>
+            <ul class="legend">
+              <li><i class="swatch move"></i>Move</li>
+              <li><i class="swatch attack"></i>Attack</li>
+              <li><i class="swatch rock"></i>Blocked</li>
+              <li><i class="swatch lava"></i>Lava (−3 HP)</li>
+              <li><i class="swatch player"></i>You</li>
+              <li><i class="swatch enemy"></i>Enemy</li>
+            </ul>
+          </section>
+          <section class="panel log-panel">
+            <h2>Log</h2>
+            <ol id="log"></ol>
+          </section>
+        </aside>
+      </div>
+      <p id="live" class="sr-only" aria-live="polite"></p>
+    </div>
+  </body>
+</html>
