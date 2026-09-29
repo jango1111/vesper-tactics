@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/vesper-tactics/assets/logo/vesper_crest_32.png" />
     <title>Vesper Tactics</title>
-    <script type="module" crossorigin src="/vesper-tactics/assets/index-D7wdPt9G.js"></script>
-    <link rel="stylesheet" crossorigin href="/vesper-tactics/assets/index-B3O7cKvE.css">
+    <script type="module" crossorigin src="/vesper-tactics/assets/index-BqXW88C8.js"></script>
+    <link rel="stylesheet" crossorigin href="/vesper-tactics/assets/index-aULLD68s.css">
   </head>
   <body>
     <button
@@ -28,6 +28,10 @@
         <div class="purse-row">
           <span class="gold-badge" aria-label="Gold"><span class="coin" aria-hidden="true"></span><span id="party-gold">0</span> gold</span>
           <button id="open-market" type="button" class="market-link">Market</button>
+        </div>
+        <div id="party-match" class="match-banner" hidden>
+          <p id="party-match-text"></p>
+          <button id="party-leave" type="button" class="map-secondary">Leave match</button>
         </div>
         <div class="party-panel">
           <div class="select-layout">
@@ -66,6 +70,7 @@
               <div class="size-ticks" aria-hidden="true"><span>12</span><span>16</span><span>20</span></div>
               <button id="map-reroll" type="button" class="map-secondary">New layout</button>
               <p class="map-legend" id="map-legend"></p>
+              <p id="map-keep" class="map-keep" hidden>This is the board from the last round. Pick another map, change the size, or press New layout to fight somewhere else.</p>
               <div class="map-actions">
                 <button id="map-back" type="button" class="map-secondary">Back to team</button>
                 <button id="map-start" type="button">Begin match</button>
@@ -132,6 +137,7 @@
                 <p id="round-gold" class="round-gold"></p>
                 <div class="round-actions">
                   <button id="round-next" type="button"></button>
+                  <button id="round-change" type="button" class="map-secondary">Change team or map</button>
                   <button id="round-market" type="button" class="map-secondary">Market</button>
                   <button id="round-leave" type="button" class="map-secondary">Leave match</button>
                 </div>
