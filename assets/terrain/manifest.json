@@ -1,0 +1,48 @@
+{
+  "tileSize": [
+    64,
+    32
+  ],
+  "ground": {
+    "grass": [
+      "ground/grass_1.png",
+      "ground/grass_2.png",
+      "ground/grass_3.png"
+    ],
+    "darkgrass": [
+      "ground/darkgrass_1.png",
+      "ground/darkgrass_2.png",
+      "ground/darkgrass_3.png"
+    ],
+    "water": [
+      "ground/water_1.png",
+      "ground/water_2.png",
+      "ground/water_3.png"
+    ],
+    "bridge": [
+      "ground/bridge_1.png",
+      "ground/bridge_2.png",
+      "ground/bridge_3.png"
+    ],
+    "lava": [
+      "ground/lava_1.png",
+      "ground/lava_2.png",
+      "ground/lava_3.png"
+    ],
+    "basalt": [
+      "ground/basalt_1.png",
+      "ground/basalt_2.png",
+      "ground/basalt_3.png"
+    ],
+    "cobble": [
+      "ground/cobble_1.png",
+      "ground/cobble_2.png",
+      "ground/cobble_3.png"
+    ],
+    "dirt": [
+      "ground/dirt_1.png",
+      "ground/dirt_2.png",
+      "ground/dirt_3.png"
+    ]
+  }
+}
