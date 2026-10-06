@@ -44,5 +44,233 @@
       "ground/dirt_2.png",
       "ground/dirt_3.png"
     ]
+  },
+  "props": {
+    "tree": [
+      {
+        "file": "props/tree_1.png",
+        "footprint": [
+          1,
+          1
+        ],
+        "anchor": [
+          48,
+          103
+        ]
+      },
+      {
+        "file": "props/tree_2.png",
+        "footprint": [
+          1,
+          1
+        ],
+        "anchor": [
+          48,
+          86
+        ]
+      }
+    ],
+    "stump": [
+      {
+        "file": "props/stump.png",
+        "footprint": [
+          1,
+          1
+        ],
+        "anchor": [
+          32,
+          15
+        ]
+      }
+    ],
+    "boulder": [
+      {
+        "file": "props/boulder.png",
+        "footprint": [
+          1,
+          1
+        ],
+        "anchor": [
+          32,
+          28
+        ]
+      }
+    ],
+    "rock": [
+      {
+        "file": "props/rock.png",
+        "footprint": [
+          1,
+          1
+        ],
+        "anchor": [
+          32,
+          20
+        ]
+      }
+    ],
+    "mushroom": [
+      {
+        "file": "props/mushroom.png",
+        "footprint": [
+          1,
+          1
+        ],
+        "anchor": [
+          32,
+          17
+        ]
+      }
+    ],
+    "house": [
+      {
+        "file": "props/house_slate.png",
+        "footprint": [
+          2,
+          2
+        ],
+        "anchor": [
+          64,
+          85
+        ]
+      },
+      {
+        "file": "props/house_thatch.png",
+        "footprint": [
+          2,
+          2
+        ],
+        "anchor": [
+          64,
+          85
+        ]
+      }
+    ],
+    "well": [
+      {
+        "file": "props/well.png",
+        "footprint": [
+          1,
+          1
+        ],
+        "anchor": [
+          32,
+          58
+        ]
+      }
+    ],
+    "stall": [
+      {
+        "file": "props/stall_red.png",
+        "footprint": [
+          2,
+          1
+        ],
+        "anchor": [
+          64,
+          62
+        ]
+      },
+      {
+        "file": "props/stall_blue.png",
+        "footprint": [
+          2,
+          1
+        ],
+        "anchor": [
+          64,
+          62
+        ]
+      }
+    ],
+    "crate": [
+      {
+        "file": "props/crate.png",
+        "footprint": [
+          1,
+          1
+        ],
+        "anchor": [
+          32,
+          24
+        ]
+      }
+    ],
+    "barrel": [
+      {
+        "file": "props/barrel.png",
+        "footprint": [
+          1,
+          1
+        ],
+        "anchor": [
+          32,
+          21
+        ]
+      }
+    ],
+    "fence": [
+      {
+        "file": "props/fence.png",
+        "footprint": [
+          1,
+          1
+        ],
+        "anchor": [
+          32,
+          30
+        ]
+      }
+    ],
+    "planter": [
+      {
+        "file": "props/planter.png",
+        "footprint": [
+          1,
+          1
+        ],
+        "anchor": [
+          32,
+          22
+        ]
+      }
+    ],
+    "spire": [
+      {
+        "file": "props/spire_1.png",
+        "footprint": [
+          1,
+          1
+        ],
+        "anchor": [
+          32,
+          60
+        ]
+      },
+      {
+        "file": "props/spire_2.png",
+        "footprint": [
+          1,
+          1
+        ],
+        "anchor": [
+          32,
+          56
+        ]
+      }
+    ],
+    "deadtree": [
+      {
+        "file": "props/deadtree.png",
+        "footprint": [
+          1,
+          1
+        ],
+        "anchor": [
+          48,
+          78
+        ]
+      }
+    ]
   }
 }
