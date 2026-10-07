@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/vesper-tactics/assets/logo/vesper_crest_32.png" />
     <title>Vesper Tactics</title>
-    <script type="module" crossorigin src="/vesper-tactics/assets/index-B2V2c7nm.js"></script>
-    <link rel="stylesheet" crossorigin href="/vesper-tactics/assets/index-aULLD68s.css">
+    <script type="module" crossorigin src="/vesper-tactics/assets/index-SfSyaWIE.js"></script>
+    <link rel="stylesheet" crossorigin href="/vesper-tactics/assets/index-cH59JB-6.css">
   </head>
   <body>
     <button
@@ -14,11 +14,99 @@
       class="boot"
       type="button"
       autofocus
-      aria-label="Vesper Tactics. Click or tap to choose your party."
+      aria-label="Vesper Tactics. Click or tap to choose a game."
     >
       <img src="/vesper-tactics/assets/logo/vesper_logo_main_1280x720.png" alt="" />
-      <span class="boot-caption">Click or tap to choose your party</span>
+      <span class="boot-caption">Click or tap to begin</span>
     </button>
+    <div id="modes" class="party modes" hidden>
+      <div class="party-sheet">
+        <div class="party-brand">
+          <img class="party-crest" src="/vesper-tactics/assets/logo/vesper_crest_64.png" width="64" height="64" alt="" />
+          <h2><span class="party-word">Vesper</span><span class="party-subword">Tactics</span></h2>
+        </div>
+        <div class="mode-grid">
+          <button id="mode-skirmish" type="button" class="mode-card">
+            <span class="mode-name">Skirmish</span>
+            <span class="mode-text">Pick four, choose a battlefield, and fight a match: first to 5 round wins.</span>
+          </button>
+          <button id="mode-conquest" type="button" class="mode-card">
+            <span class="mode-name">Conquest</span>
+            <span class="mode-text">Choose a ruler and lead a kingdom of 20 across the realm map. Take the enemy capital to win.</span>
+          </button>
+        </div>
+        <button id="mode-continue" type="button" class="mode-continue" hidden></button>
+      </div>
+    </div>
+    <div id="rulers" class="party rulers" hidden>
+      <div class="party-sheet ruler-sheet">
+        <div class="party-brand">
+          <img class="party-crest" src="/vesper-tactics/assets/logo/vesper_crest_64.png" width="64" height="64" alt="" />
+          <h2><span class="party-word">Rulers</span><span class="party-subword">Choose who leads</span></h2>
+        </div>
+        <div class="party-panel ruler-panel">
+          <div id="ruler-list" class="ruler-list" role="radiogroup" aria-label="Ruler"></div>
+          <section id="ruler-detail" class="ruler-detail" aria-live="polite"></section>
+          <div class="ruler-actions">
+            <label class="kingdom-pick" for="ruler-kingdom">Kingdom
+              <select id="ruler-kingdom"></select>
+            </label>
+            <button id="rulers-back" type="button" class="map-secondary">Back</button>
+            <button id="rulers-start" type="button">Begin conquest</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="realm" class="party realm" hidden>
+      <div class="realm-sheet">
+        <header class="realm-head">
+          <div class="realm-title">
+            <span id="realm-banner" class="realm-banner" aria-hidden="true"></span>
+            <div>
+              <p id="realm-eyebrow" class="eyebrow">Conquest</p>
+              <h2 id="realm-name" class="realm-name">Realm</h2>
+            </div>
+          </div>
+          <div class="realm-purse">
+            <span class="diamond-badge" aria-label="Diamonds"><span class="gem" aria-hidden="true"></span><span id="realm-diamonds">0</span></span>
+            <span class="gold-badge" aria-label="Gold"><span class="coin" aria-hidden="true"></span><span id="realm-gold">0</span> gold</span>
+            <button id="realm-ruler" type="button" class="map-secondary">Ruler</button>
+            <button id="realm-market" type="button" class="map-secondary">Market</button>
+            <button id="realm-leave" type="button" class="map-secondary">Title</button>
+            <button id="realm-end" type="button">End turn</button>
+          </div>
+        </header>
+        <div class="realm-body">
+          <div class="realm-map-frame">
+            <canvas id="realm-map" width="800" height="470" aria-label="Realm map. Click a region to see it; select one of your squads, then click a highlighted neighbour to move or attack."></canvas>
+            <p id="realm-hint" class="realm-hint" aria-live="polite"></p>
+          </div>
+          <aside class="realm-side">
+            <section class="panel">
+              <h2>Region</h2>
+              <div id="realm-region"></div>
+            </section>
+            <section class="panel">
+              <h2>Squads here</h2>
+              <div id="realm-squads"></div>
+            </section>
+            <section class="panel log-panel">
+              <h2>Chronicle</h2>
+              <ol id="realm-log"></ol>
+            </section>
+          </aside>
+        </div>
+        <div id="realm-dialog" class="realm-dialog" role="dialog" aria-modal="true" aria-labelledby="realm-dialog-title" hidden>
+          <div class="realm-dialog-card">
+            <div id="realm-dialog-body"></div>
+            <div class="realm-dialog-actions">
+              <button id="realm-dialog-action" type="button" hidden></button>
+              <button id="realm-dialog-close" type="button" class="map-secondary">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="party" class="party" hidden>
       <div class="party-sheet">
         <div class="party-brand">
@@ -28,6 +116,7 @@
         <div class="purse-row">
           <span class="gold-badge" aria-label="Gold"><span class="coin" aria-hidden="true"></span><span id="party-gold">0</span> gold</span>
           <button id="open-market" type="button" class="market-link">Market</button>
+          <button id="party-modes" type="button" class="market-link">Game modes</button>
         </div>
         <div id="party-match" class="match-banner" hidden>
           <p id="party-match-text"></p>
@@ -143,6 +232,16 @@
                 </div>
               </div>
             </div>
+            <div id="conquest-panel" class="round-panel" role="dialog" aria-modal="false" aria-labelledby="conquest-title" hidden>
+              <div class="round-card">
+                <p id="conquest-eyebrow" class="round-eyebrow"></p>
+                <h2 id="conquest-title" class="round-title"></h2>
+                <p id="conquest-text" class="round-stakes"></p>
+                <div class="round-actions">
+                  <button id="conquest-back" type="button">Back to the realm</button>
+                </div>
+              </div>
+            </div>
             <div class="zoom-controls" role="group" aria-label="Board view">
               <button id="zoom-in" type="button" aria-label="Zoom in">+</button>
               <button id="zoom-out" type="button" aria-label="Zoom out">−</button>
@@ -204,6 +303,6 @@
         </aside>
       </div>
       <p id="live" class="sr-only" aria-live="polite"></p>
-    </div>
+    </div>
   </body>
 </html>
