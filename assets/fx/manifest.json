@@ -1,0 +1,117 @@
+{
+  "slash": {
+    "files": [
+      "slash.png"
+    ],
+    "kind": "glow"
+  },
+  "slash_heavy": {
+    "files": [
+      "slash_heavy.png"
+    ],
+    "kind": "glow"
+  },
+  "spark": {
+    "files": [
+      "spark_1.png",
+      "spark_2.png",
+      "spark_3.png"
+    ],
+    "kind": "glow"
+  },
+  "impact_ring": {
+    "files": [
+      "impact_ring.png"
+    ],
+    "kind": "glow"
+  },
+  "glow": {
+    "files": [
+      "glow.png"
+    ],
+    "kind": "glow"
+  },
+  "ember": {
+    "files": [
+      "ember_1.png",
+      "ember_2.png",
+      "ember_3.png"
+    ],
+    "kind": "glow"
+  },
+  "fireball": {
+    "files": [
+      "fireball.png"
+    ],
+    "kind": "glow"
+  },
+  "explosion": {
+    "files": [
+      "explosion.png"
+    ],
+    "kind": "glow"
+  },
+  "lightning": {
+    "files": [
+      "lightning_1.png",
+      "lightning_2.png"
+    ],
+    "kind": "glow"
+  },
+  "holy_beam": {
+    "files": [
+      "holy_beam.png"
+    ],
+    "kind": "glow"
+  },
+  "heal_sparkle": {
+    "files": [
+      "heal_sparkle.png"
+    ],
+    "kind": "glow"
+  },
+  "shield_glow": {
+    "files": [
+      "shield_glow.png"
+    ],
+    "kind": "glow"
+  },
+  "ice_shard": {
+    "files": [
+      "ice_shard_1.png",
+      "ice_shard_2.png"
+    ],
+    "kind": "solid"
+  },
+  "smoke": {
+    "files": [
+      "smoke_1.png",
+      "smoke_2.png"
+    ],
+    "kind": "solid"
+  },
+  "poison_bubble": {
+    "files": [
+      "poison_bubble.png"
+    ],
+    "kind": "solid"
+  },
+  "splinter_wood": {
+    "files": [
+      "splinter_wood.png"
+    ],
+    "kind": "solid"
+  },
+  "splinter_stone": {
+    "files": [
+      "splinter_stone.png"
+    ],
+    "kind": "solid"
+  },
+  "arrow": {
+    "files": [
+      "arrow.png"
+    ],
+    "kind": "solid"
+  }
+}
