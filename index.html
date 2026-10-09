@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/vesper-tactics/assets/logo/vesper_crest_32.png" />
     <title>Vesper Tactics</title>
-    <script type="module" crossorigin src="/vesper-tactics/assets/index-CRn8PH_A.js"></script>
-    <link rel="stylesheet" crossorigin href="/vesper-tactics/assets/index-kroK6paV.css">
+    <script type="module" crossorigin src="/vesper-tactics/assets/index-C44JYY0d.js"></script>
+    <link rel="stylesheet" crossorigin href="/vesper-tactics/assets/index-Bggse6H8.css">
   </head>
   <body>
     <button
@@ -68,19 +68,21 @@
               <h2 id="realm-name" class="realm-name">Realm</h2>
             </div>
           </div>
-          <div class="realm-purse">
-            <span class="diamond-badge" aria-label="Diamonds"><span class="gem" aria-hidden="true"></span><span id="realm-diamonds">0</span></span>
-            <span class="gold-badge" aria-label="Gold"><span class="coin" aria-hidden="true"></span><span id="realm-gold">0</span> gold</span>
-            <button id="realm-ruler" type="button" class="map-secondary">Ruler</button>
-            <button id="realm-market" type="button" class="map-secondary">Market</button>
-            <button id="realm-leave" type="button" class="map-secondary">Title</button>
-            <button id="realm-end" type="button">End turn</button>
-          </div>
         </header>
         <div class="realm-body">
           <div class="realm-map-frame">
-            <canvas id="realm-map" width="800" height="470" aria-label="Realm map. Click a region to see it; select one of your squads, then click a highlighted neighbour to move or attack."></canvas>
-            <p id="realm-hint" class="realm-hint" aria-live="polite"></p>
+            <canvas id="realm-map" width="1000" height="690" aria-label="Realm map. Click a region to see it; select one of your squads, then click a highlighted neighbour to move or attack."></canvas>
+            <div class="realm-bar">
+              <p id="realm-hint" class="realm-hint" aria-live="polite"></p>
+              <div class="realm-purse">
+                <span class="diamond-badge" aria-label="Diamonds"><span class="gem" aria-hidden="true"></span><span id="realm-diamonds">0</span></span>
+                <span class="gold-badge" aria-label="Gold"><span class="coin" aria-hidden="true"></span><span id="realm-gold">0</span> gold</span>
+                <button id="realm-ruler" type="button" class="map-secondary">Ruler</button>
+                <button id="realm-market" type="button" class="map-secondary">Market</button>
+                <button id="realm-leave" type="button" class="map-secondary">Title</button>
+                <button id="realm-end" type="button">End turn</button>
+              </div>
+            </div>
           </div>
           <aside class="realm-side">
             <section class="panel">
@@ -288,6 +290,8 @@
                 <li><button id="skill-2" class="rpg-item skill-item" type="button" disabled><span class="skill-label"></span><span class="skill-meta"></span></button></li>
                 <li><button id="skill-3" class="rpg-item skill-item" type="button" disabled><span class="skill-label"></span><span class="skill-meta"></span></button></li>
                 <li><button id="skill-4" class="rpg-item skill-item" type="button" disabled><span class="skill-label"></span><span class="skill-meta"></span></button></li>
+                <li hidden><button id="skill-5" class="rpg-item skill-item" type="button" disabled><span class="skill-label"></span><span class="skill-meta"></span></button></li>
+                <li hidden><button id="skill-6" class="rpg-item skill-item" type="button" disabled><span class="skill-label"></span><span class="skill-meta"></span></button></li>
               </ul>
               <p id="skill-help" class="rpg-help" aria-live="polite"></p>
             </section>

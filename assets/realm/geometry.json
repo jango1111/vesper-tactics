@@ -1,0 +1,68 @@
+{
+  "plains": {
+    "scale": 0.1954,
+    "corner": 30,
+    "height": 92,
+    "midTop": 0
+  },
+  "plains2": {
+    "scale": 0.1972,
+    "corner": 30,
+    "height": 93,
+    "midTop": 0
+  },
+  "farmland": {
+    "scale": 0.1948,
+    "corner": 32,
+    "height": 94,
+    "midTop": 3
+  },
+  "forest": {
+    "scale": 0.1984,
+    "corner": 70,
+    "height": 125,
+    "midTop": 20
+  },
+  "shrine": {
+    "scale": 0.1994,
+    "corner": 45,
+    "height": 108,
+    "midTop": 0
+  },
+  "watchtower": {
+    "scale": 0.1994,
+    "corner": 72,
+    "height": 126,
+    "midTop": 9
+  },
+  "market": {
+    "scale": 0.213,
+    "corner": 49,
+    "height": 104,
+    "midTop": 13
+  },
+  "capital": {
+    "scale": 0.2123,
+    "corner": 81,
+    "height": 135,
+    "midTop": 1
+  },
+  "citystate": {
+    "scale": 0.2119,
+    "corner": 54,
+    "height": 109,
+    "midTop": 1
+  },
+  "mine": {
+    "scale": 0.1684,
+    "corner": 67,
+    "height": 130,
+    "midTop": 4
+  },
+  "forge": {
+    "scale": 0.1664,
+    "corner": 54,
+    "height": 116,
+    "midTop": 0
+  }
+}
