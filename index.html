@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/vesper-tactics/assets/logo/vesper_crest_32.png" />
     <title>Vesper Tactics</title>
-    <script type="module" crossorigin src="/vesper-tactics/assets/index-Bc-ViSHu.js"></script>
-    <link rel="stylesheet" crossorigin href="/vesper-tactics/assets/index-wWPIAt29.css">
+    <script type="module" crossorigin src="/vesper-tactics/assets/index-CWVscI78.js"></script>
+    <link rel="stylesheet" crossorigin href="/vesper-tactics/assets/index-kroK6paV.css">
   </head>
   <body>
     <button
@@ -47,6 +47,7 @@
         <div class="party-panel ruler-panel">
           <div id="ruler-list" class="ruler-list" role="radiogroup" aria-label="Ruler"></div>
           <section id="ruler-detail" class="ruler-detail" aria-live="polite"></section>
+          <div class="ai-picker" data-ai-picker></div>
           <div class="ruler-actions">
             <label class="kingdom-pick" for="ruler-kingdom">Kingdom
               <select id="ruler-kingdom"></select>
@@ -114,7 +115,7 @@
           <h2><span class="party-word">Rulers</span><span class="party-subword">Who leads your side?</span></h2>
         </div>
         <div class="party-panel ruler-panel">
-          <p class="sk-ruler-intro">A ruler fights beside your four as a fifth unit, with a passive that lifts your whole side and a Royal Skill they can unleash once per battle. Bring one and the enemy answers with a ruler of its own.</p>
+          <p class="sk-ruler-intro">A ruler fights beside your four as a fifth unit, with a passive that lifts your whole side and a Royal Skill they can unleash again every 3 turns. Bring one and the enemy answers with a ruler of its own.</p>
           <div id="sk-ruler-list" class="ruler-list" role="radiogroup" aria-label="Ruler"></div>
           <section id="sk-ruler-detail" class="ruler-detail" aria-live="polite"></section>
           <div class="ruler-actions">
@@ -178,6 +179,7 @@
               <div class="size-ticks" aria-hidden="true"><span>12</span><span>16</span><span>20</span></div>
               <button id="map-reroll" type="button" class="map-secondary">New layout</button>
               <p class="map-legend" id="map-legend"></p>
+              <div class="ai-picker" data-ai-picker></div>
               <p id="map-keep" class="map-keep" hidden>This is the board from the last round. Pick another map, change the size, or press New layout to fight somewhere else.</p>
               <div class="map-actions">
                 <button id="map-back" type="button" class="map-secondary">Back to team</button>
