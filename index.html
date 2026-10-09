@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/vesper-tactics/assets/logo/vesper_crest_32.png" />
     <title>Vesper Tactics</title>
-    <script type="module" crossorigin src="/vesper-tactics/assets/index-BrTGVCfB.js"></script>
-    <link rel="stylesheet" crossorigin href="/vesper-tactics/assets/index-D3k7XWsh.css">
+    <script type="module" crossorigin src="/vesper-tactics/assets/index-CuskiXLh.js"></script>
+    <link rel="stylesheet" crossorigin href="/vesper-tactics/assets/index-H7Neh9nc.css">
   </head>
   <body>
     <button
@@ -107,6 +107,24 @@
         </div>
       </div>
     </div>
+    <div id="sk-rulers" class="party rulers" hidden>
+      <div class="party-sheet ruler-sheet">
+        <div class="party-brand">
+          <img class="party-crest" src="/vesper-tactics/assets/logo/vesper_crest_64.png" width="64" height="64" alt="" />
+          <h2><span class="party-word">Rulers</span><span class="party-subword">Who leads your side?</span></h2>
+        </div>
+        <div class="party-panel ruler-panel">
+          <p class="sk-ruler-intro">A ruler fights beside your four as a fifth unit, with a passive that lifts your whole side and a Royal Skill they can unleash once per battle. Bring one and the enemy answers with a ruler of its own.</p>
+          <div id="sk-ruler-list" class="ruler-list" role="radiogroup" aria-label="Ruler"></div>
+          <section id="sk-ruler-detail" class="ruler-detail" aria-live="polite"></section>
+          <div class="ruler-actions">
+            <button id="sk-rulers-back" type="button" class="map-secondary">Back</button>
+            <button id="sk-rulers-none" type="button" class="map-secondary">Fight without a ruler</button>
+            <button id="sk-rulers-go" type="button"></button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="party" class="party" hidden>
       <div class="party-sheet">
         <div class="party-brand">
@@ -132,9 +150,7 @@
           </div>
           <h3>Your team <span id="party-count">0 / 4</span></h3>
           <ol id="party-slots" class="lineup"></ol>
-          <h3>Ruler <span class="ruler-optional">optional 5th unit · one per team</span></h3>
-          <div id="ruler-picks" class="ruler-picks"></div>
-          <p class="party-hint">Bring a ruler and the enemy brings one too, so it's 5 against 5. Rulers fight with their passive and their once-per-battle Royal Skill.</p>
+          <div id="party-ruler" class="party-ruler"></div>
           <p class="party-hint">Click a class to see its stats and skills, then Add to team. The same class can join more than once. Team order is turn order.</p>
           <p id="party-note" class="party-note" aria-live="polite"></p>
           <p id="enemy-line" class="enemy-line"></p>
