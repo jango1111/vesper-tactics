@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/vesper-tactics/assets/logo/vesper_crest_32.png" />
     <title>Vesper Tactics</title>
-    <script type="module" crossorigin src="/vesper-tactics/assets/index-DlRvgxsT.js"></script>
-    <link rel="stylesheet" crossorigin href="/vesper-tactics/assets/index-DMclVyPQ.css">
+    <script type="module" crossorigin src="/vesper-tactics/assets/index-ZKuclMGo.js"></script>
+    <link rel="stylesheet" crossorigin href="/vesper-tactics/assets/index-D5vzpinp.css">
   </head>
   <body>
     <button
@@ -52,6 +52,9 @@
             <label class="kingdom-pick" for="ruler-kingdom">Kingdom
               <select id="ruler-kingdom"></select>
             </label>
+            <label class="kingdom-pick" for="ruler-mapsize">Map
+              <select id="ruler-mapsize"></select>
+            </label>
             <button id="rulers-back" type="button" class="map-secondary">Back</button>
             <button id="rulers-start" type="button">Begin conquest</button>
           </div>
@@ -71,7 +74,9 @@
         </header>
         <div class="realm-body">
           <div class="realm-map-frame">
-            <canvas id="realm-map" width="1000" height="690" aria-label="Realm map. Click a region to see it; select one of your squads, then click a highlighted neighbour to move or attack."></canvas>
+            <div id="realm-map-scroll" class="realm-map-scroll">
+              <canvas id="realm-map" width="1000" height="690" aria-label="Realm map. Click a region to see it; select one of your squads, then click a highlighted neighbour to move or attack."></canvas>
+            </div>
             <div class="realm-bar">
               <p id="realm-hint" class="realm-hint" aria-live="polite"></p>
               <div class="realm-purse">
