@@ -210,8 +210,7 @@ LIRA: No... no, let go of me! Kael, get up!
 (Hold on the cloak. Cut to black.)
 
 ## Game over: Lira falls
-(DRAFT by Claude, for Brrrr to rewrite. The still is the teen game over until the Lira picture is in.)
-[STILL: ch1-gameover-teen]
+(DRAFT by Claude, for Brrrr to rewrite. Add [STILL: ch1-gameover-lira] here once the picture is in.)
 (Lira stumbles on the cobbles and goes down. Her bow slips from her fingers.)
 KAEL: Lira! No, no, no...
 (Kael drops to his knees in front of her. She finds his hands and holds on.)
