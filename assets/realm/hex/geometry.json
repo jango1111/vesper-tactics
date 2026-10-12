@@ -29,11 +29,59 @@
     "height": 103,
     "midTop": 0
   },
-  "plains": {
+  "plains3": {
     "scale": 0.2051,
     "corner": 29,
     "height": 106,
     "midTop": 0
+  },
+  "plains": {
+    "scale": 0.2055,
+    "corner": 30,
+    "height": 106,
+    "midTop": 0
+  },
+  "plains4": {
+    "scale": 0.2003,
+    "corner": 29,
+    "height": 104,
+    "midTop": 0
+  },
+  "farmland": {
+    "scale": 0.2055,
+    "corner": 31,
+    "height": 108,
+    "midTop": 2
+  },
+  "market": {
+    "scale": 0.2006,
+    "corner": 32,
+    "height": 110,
+    "midTop": 1
+  },
+  "capital": {
+    "scale": 0.2006,
+    "corner": 46,
+    "height": 125,
+    "midTop": 2
+  },
+  "citystate": {
+    "scale": 0.2009,
+    "corner": 33,
+    "height": 112,
+    "midTop": 0
+  },
+  "mine": {
+    "scale": 0.1839,
+    "corner": 37,
+    "height": 118,
+    "midTop": 0
+  },
+  "forge": {
+    "scale": 0.1834,
+    "corner": 31,
+    "height": 112,
+    "midTop": 1
   },
   "hexSide": 30,
   "hexTop": 30
