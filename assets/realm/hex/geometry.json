@@ -1,0 +1,40 @@
+{
+  "forest": {
+    "scale": 0.2323,
+    "corner": 46,
+    "height": 126,
+    "midTop": 16
+  },
+  "shrine": {
+    "scale": 0.2323,
+    "corner": 36,
+    "height": 115,
+    "midTop": 0
+  },
+  "watchtower": {
+    "scale": 0.2327,
+    "corner": 48,
+    "height": 126,
+    "midTop": 7
+  },
+  "plains2": {
+    "scale": 0.2055,
+    "corner": 29,
+    "height": 106,
+    "midTop": 0
+  },
+  "forest2": {
+    "scale": 0.2003,
+    "corner": 28,
+    "height": 103,
+    "midTop": 0
+  },
+  "plains": {
+    "scale": 0.2051,
+    "corner": 29,
+    "height": 106,
+    "midTop": 0
+  },
+  "hexSide": 30,
+  "hexTop": 30
+}
