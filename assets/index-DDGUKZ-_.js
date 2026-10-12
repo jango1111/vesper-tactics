@@ -210,8 +210,9 @@ LIRA: No... no, let go of me! Kael, get up!
 (Hold on the cloak. Cut to black.)
 
 ## Game over: Lira falls
-(DRAFT by Claude, for Brrrr to rewrite. Add [STILL: ch1-gameover-lira] here once the picture is in.)
-(Lira stumbles on the cobbles and goes down. Her bow slips from her fingers.)
+(DRAFT by Claude, for Brrrr to rewrite.)
+[STILL: ch1-gameover-lira]
+(Lira stumbles and falls on the cobbles. Her bow slips from her fingers.)
 KAEL: Lira! No, no, no...
 (Kael drops to his knees in front of her. She finds his hands and holds on.)
 LIRA: Kael... your hands are shaking.
