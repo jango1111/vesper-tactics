@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/vesper-tactics/assets/logo/vesper_crest_32.png" />
     <title>Vesper Tactics</title>
-    <script type="module" crossorigin src="/vesper-tactics/assets/index-C1buiqdQ.js"></script>
-    <link rel="stylesheet" crossorigin href="/vesper-tactics/assets/index-C3duFclL.css">
+    <script type="module" crossorigin src="/vesper-tactics/assets/index-DqFufjS8.js"></script>
+    <link rel="stylesheet" crossorigin href="/vesper-tactics/assets/index-DxaUbNCl.css">
   </head>
   <body>
     <button
@@ -219,7 +219,12 @@
           <button id="close-market" type="button" class="market-link">Back to team</button>
         </div>
         <div class="party-panel market-panel">
-          <p class="market-intro">Every enemy you defeat pays 5 gold. Each skill costs 20. A character can own one of its two Market skills, so buying one seals the other.</p>
+          <div class="market-tabs" role="tablist" aria-label="Shops">
+            <button type="button" class="market-tab" role="tab" data-shop="potions">Potions Market</button>
+            <button type="button" class="market-tab" role="tab" data-shop="blacksmith">Blacksmith</button>
+            <button type="button" class="market-tab" role="tab" data-shop="magic">Magic &amp; Skills</button>
+          </div>
+          <p id="market-intro" class="market-intro"></p>
           <p id="market-note" class="market-note" aria-live="polite"></p>
           <div id="market-list" class="market-list"></div>
           <button id="reset-progress" type="button" class="map-secondary reset-progress">Reset gold and skills</button>
