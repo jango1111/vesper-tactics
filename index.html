@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="/vesper-tactics/assets/logo/vesper_crest_32.png" />
     <title>Vesper Tactics</title>
-    <script type="module" crossorigin src="/vesper-tactics/assets/index-DgHumhFe.js"></script>
+    <script type="module" crossorigin src="/vesper-tactics/assets/index-ulzfQME8.js"></script>
     <link rel="stylesheet" crossorigin href="/vesper-tactics/assets/index-DxaUbNCl.css">
   </head>
   <body>
@@ -56,13 +56,19 @@
             <label class="kingdom-pick" for="ruler-kingdom">Kingdom
               <select id="ruler-kingdom"></select>
             </label>
+            <label class="kingdom-pick" for="ruler-mode">War
+              <select id="ruler-mode">
+                <option value="six">War of Six: all six kingdoms</option>
+                <option value="duel">Duel: you against one rival</option>
+              </select>
+            </label>
             <label class="kingdom-pick" for="ruler-mapsize">Map
               <select id="ruler-mapsize"></select>
             </label>
-            <label class="kingdom-pick" for="ruler-layout">Land
+            <label class="kingdom-pick duel-only" for="ruler-layout">Land
               <select id="ruler-layout"></select>
             </label>
-            <label class="kingdom-pick" for="ruler-grid">Board
+            <label class="kingdom-pick duel-only" for="ruler-grid">Board
               <select id="ruler-grid"></select>
             </label>
             <button id="rulers-back" type="button" class="map-secondary">Back</button>
